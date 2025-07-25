@@ -5,11 +5,11 @@ const Navbar = () => (
     <div className="logo">👟 FASHION SSR</div>
     <nav>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Women</a></li>
-        <li><a href="#">Men</a></li>
-        <li><a href="#">Shoes</a></li>
-        <li><a href="#">Accessories</a></li>
+        <li><a href="home">Home</a></li>
+        <li><a href="women">Women</a></li>
+        <li><a href="men">Men</a></li>
+        <li><a href="shoes">Shoes</a></li>
+        <li><a href="accessories">Accessories</a></li>
       </ul>
     </nav>
   </header>
