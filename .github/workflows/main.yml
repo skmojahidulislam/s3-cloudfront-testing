@@ -36,14 +36,14 @@ jobs:
       - name: Build & Push Docker Image to DockerHub
         run: |
           docker build -t ${{ secrets.DOCKER_USERNAME }}/fashion-ssr:tag1 .
-          docker push ${{ secrets.DOCKER_USERNAME }}/fashion-bbsr:tag1
+          docker push ${{ secrets.DOCKER_USERNAME }}/fashion-ssr:tag1
 
       - name: Clean S3 bucket
         run: |
           aws s3 rm s3://evatril-testing/ --recursive
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_SCCESS_KEY }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ap-south-1
 
       - name: upload Build to S3
@@ -59,6 +59,6 @@ jobs:
           aws cloudfront create-invalidation --distribution-id E1VBY1YM1ZWV0K --paths "/*"
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRETS_ACCESS_KEY: ${{ secrets.AWS_SECRETS_ACCESS_KEY }}
+          AWS_SECRETS_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ap-south-1
        
