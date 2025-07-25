@@ -50,6 +50,11 @@ const products = [
     price: "₹999",
     image: "https://blog.g3fashion.com/wp-content/uploads/2018/09/0c298a573985653c4f93684d525799c7-e1596631257295.jpg"
   },
+  {
+    name: "Mobile Phones",
+    price: "₹7000",
+    image: "https://www.gorefurbo.com/cdn/shop/collections/Refurbished_Mobile_Phones_1.jpg?v=1695978895"
+  },
 ];
 
 export default products;
